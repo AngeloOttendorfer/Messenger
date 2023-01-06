@@ -4,29 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/images/messenger.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/networking/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/networking/ServerManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/loginScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/registrationScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/welcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="updated project">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/paper-clip.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/send-button.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/HelloApplication.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/images/messenger.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/messenger.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/welcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/welcomeScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +31,37 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Messenger" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Messenger" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Messenger" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -67,8 +92,74 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger/images" />
       <recent name="$PROJECT_DIR$/src/main/java/images" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.MessengerApplication">
+    <configuration name="MessengerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.messenger.MessengerApplication" />
+      <module name="Messenger.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.messenger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Messenger [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Messenger [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MessengerApplication" />
+        <item itemvalue="Gradle.Messenger [dependencies]" />
+        <item itemvalue="Gradle.Messenger [clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -94,8 +185,75 @@
       <workItem from="1671810236892" duration="280000" />
       <workItem from="1671810590821" duration="257000" />
       <workItem from="1671810881919" duration="14000" />
-      <workItem from="1671810926573" duration="1113000" />
+      <workItem from="1671810926573" duration="2320000" />
+      <workItem from="1672129234813" duration="82000" />
+      <workItem from="1672129389415" duration="36000" />
+      <workItem from="1672129612772" duration="20000" />
+      <workItem from="1672129901509" duration="32000" />
+      <workItem from="1672130129069" duration="37000" />
+      <workItem from="1672658480170" duration="779000" />
+      <workItem from="1672660322890" duration="9000" />
+      <workItem from="1672757582334" duration="5553000" />
+      <workItem from="1672812267208" duration="12779000" />
+      <workItem from="1672925650506" duration="3953000" />
     </task>
+    <task id="LOCAL-00001" summary="updated MessengerApplication.java">
+      <created>1671812092794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812092794</updated>
+    </task>
+    <task id="LOCAL-00002" summary="completed WelcomeController.java abd welcomeScreen.fxml.        Open issue: program cannot load the picture messenger.png">
+      <created>1671812195518</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812195518</updated>
+    </task>
+    <task id="LOCAL-00003" summary="completed RegistrationController.java and registrationScreen.fxml">
+      <created>1671812251091</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812251092</updated>
+    </task>
+    <task id="LOCAL-00004" summary="completed LoginController.java and loginScreen.fxml">
+      <created>1671812307286</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812307286</updated>
+    </task>
+    <task id="LOCAL-00005" summary="first design and functionality added to ChatController.java and chatScreen.fxml">
+      <created>1671812382375</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812382375</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added the messenger.png and user_data.txt files">
+      <created>1671812439072</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812439073</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added core functionality for the client and the server for network communication. Additionally, a ServerManager.java class which handles a server session.">
+      <created>1671812570009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812570009</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated project">
+      <created>1671812620807</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671812620808</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,5 +269,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated MessengerApplication.java" />
+    <MESSAGE value="completed WelcomeController.java abd welcomeScreen.fxml.        Open issue: program cannot load the picture messenger.png" />
+    <MESSAGE value="completed RegistrationController.java and registrationScreen.fxml" />
+    <MESSAGE value="completed LoginController.java and loginScreen.fxml" />
+    <MESSAGE value="first design and functionality added to ChatController.java and chatScreen.fxml" />
+    <MESSAGE value="added the messenger.png and user_data.txt files" />
+    <MESSAGE value="added core functionality for the client and the server for network communication. Additionally, a ServerManager.java class which handles a server session." />
+    <MESSAGE value="updated project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated project" />
   </component>
 </project>

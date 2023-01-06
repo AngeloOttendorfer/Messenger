@@ -23,19 +23,15 @@ public class WelcomeController implements  Initializable{
     private ImageView imageView;
 
     private ServerManager serverManager = ServerManager.getInstance();
+    // Statische Referenz auf den Server Thread speichern
+    public static Thread serverThread;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // Starte den Server-Thread beim Laden der Welcome.fxml
-        Thread serverThread = new Thread(serverManager.getServer());
+        serverThread = new Thread(serverManager.getServer());
         serverThread.start();
-       /*try{
-           Image image = new Image(getClass().getResourceAsStream("/images/messenger.png"));
-           imageView.setImage(image);
-       } catch(Exception e){
-           e.printStackTrace();
-       }*/
     }
 
     public void registration() throws IOException {

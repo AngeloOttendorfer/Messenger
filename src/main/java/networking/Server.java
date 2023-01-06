@@ -19,7 +19,7 @@ public class Server implements  Runnable{
         try (ServerSocket serverSocket = new ServerSocket(8000)){
             while (true) {
                 Socket socket = serverSocket.accept();
-                Client client = new Client(socket, this);
+                //Client client = new Client(socket, this);
                 //client.start();
                 //clients.add(client);
             }
@@ -32,7 +32,7 @@ public class Server implements  Runnable{
         clients.add(client);
         if (clients.contains(client)) {
             System.out.println("Client exist");
-            clients.remove(client);
+            //clients.remove(client);
         } else {
             System.out.println("Client was not added to the list");
         }

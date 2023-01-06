@@ -9,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import networking.Server;
+import networking.ServerManager;
 
 import java.io.IOException;
 
@@ -26,6 +27,11 @@ public class RegistrationController {
 
     private Server server = new Server();
 
+    public RegistrationController() {
+        // Initialisiere den Server
+        server = ServerManager.getInstance().getServer();
+    }
+
     public void registration() {
         String username = "";
         String password = "";
@@ -41,6 +47,7 @@ public class RegistrationController {
         if((pf_pwd.getText() != null) && (!pf_pwd.getText().trim().isEmpty())){
             password = pf_pwd.getText();
         }
+
         server.addUserData(username, password, email);
     }
 

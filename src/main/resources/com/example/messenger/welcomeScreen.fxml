@@ -11,7 +11,7 @@
         <Button fx:id="btn_login" layoutX="23.0" layoutY="465.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="295.0" text="login" />
         <ImageView fx:id="imageView" fitHeight="382.0" fitWidth="651.0" layoutX="5.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../java/images/messenger.png" />
+                <Image url="@images/messenger.png" />
             </image></ImageView>
     </children>
 </AnchorPane>

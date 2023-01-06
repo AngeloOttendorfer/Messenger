@@ -27,7 +27,7 @@ public class LoginController {
     public void login() throws IOException {
         String username = tf_username.getText();
         String password = pf_pwd.getText();
-        FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chat.fxml"));
+        FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chatScreen.fxml"));
         Stage chat = (Stage) btn_login.getScene().getWindow();
         Server server = new Server();
         if(!server.containsUserData(username,password)){
