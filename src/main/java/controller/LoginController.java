@@ -24,12 +24,13 @@ public class LoginController {
     @FXML
     private Button btn_return;
 
+    private Server server = new Server();
+
     public void login() throws IOException {
         String username = tf_username.getText();
         String password = pf_pwd.getText();
         FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chatScreen.fxml"));
         Stage chat = (Stage) btn_login.getScene().getWindow();
-        Server server = new Server();
         if(!server.containsUserData(username,password)){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
@@ -39,11 +40,9 @@ public class LoginController {
             alert.showAndWait();
         }
         else{
-            Client client = new Client(username, password);
+            //Client client = new Client(username, password);
             //client.start();
-            client.connectToServer("127.0.0.1", 8000);
-            client.start();
-            System.out.println("Client is connected");
+            //client.connectToServer("127.0.0.1", 8000);// client-server connection
             chat.setScene(new Scene(chatLoader.load()));
         }
 

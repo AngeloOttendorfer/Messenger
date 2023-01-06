@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="updated project">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/paper-clip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/send-button.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/HelloApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/images/messenger.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/images/messenger.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/hello-view.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/welcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/welcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +84,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger/images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger" />
       <recent name="$PROJECT_DIR$/src/main/java/images" />
     </key>
   </component>
@@ -195,7 +187,7 @@
       <workItem from="1672660322890" duration="9000" />
       <workItem from="1672757582334" duration="5553000" />
       <workItem from="1672812267208" duration="12779000" />
-      <workItem from="1672925650506" duration="3953000" />
+      <workItem from="1672925650506" duration="7667000" />
     </task>
     <task id="LOCAL-00001" summary="updated MessengerApplication.java">
       <created>1671812092794</created>
@@ -253,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671812620808</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="updated project">
+      <created>1672991608565</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672991608566</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

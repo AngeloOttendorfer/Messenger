@@ -42,11 +42,15 @@ public class Client extends Thread{
         }
     }
 
-    public void run() {
+    public void initClient(){
         server.addClient(this); // add this client to the list of connected clients
 
         // send a message to all connected clients to inform them that a new client has joined the chat
         server.broadcastMessage(username + " has joined the chat");
+    }
+
+    public void run() {
+
 
         // lists for messages from this client and broadcast them to all connected clients
         while (reader.hasNextLine()) {

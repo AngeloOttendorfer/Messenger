@@ -14,6 +14,12 @@
       <Pane layoutY="-6.0" prefHeight="695.0" prefWidth="260.0" style="-fx-background-color: #1D232A;">
          <children>
             <Line endX="130.0" layoutX="130.0" layoutY="67.0" startX="-130.0" />
+            <TextArea editable="false" opacity="0.0" prefHeight="64.0" prefWidth="260.0" style="-fx-background-color: #1D232A;" />
+            <ImageView fitHeight="49.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" >
+            <image>
+               <Image url="@images/profile.png" />
+            </image>
+         </ImageView>
          </children>
       </Pane>
       <TextArea fx:id="ta_send" layoutX="255.0" layoutY="619.0" prefHeight="73.0" prefWidth="383.0" editable="false"/>

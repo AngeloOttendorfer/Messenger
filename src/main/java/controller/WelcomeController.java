@@ -3,36 +3,17 @@ package controller;
 import com.example.messenger.MessengerApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import networking.ServerManager;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class WelcomeController implements  Initializable{
+public class WelcomeController{
     @FXML
     private Button btn_register;
     @FXML
     private Button btn_login;
-    @FXML
-    private ImageView imageView;
-
-    private ServerManager serverManager = ServerManager.getInstance();
-    // Statische Referenz auf den Server Thread speichern
-    public static Thread serverThread;
-
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // Starte den Server-Thread beim Laden der Welcome.fxml
-        serverThread = new Thread(serverManager.getServer());
-        serverThread.start();
-    }
 
     public void registration() throws IOException {
         FXMLLoader registrationLoader = new FXMLLoader(MessengerApplication.class.getResource("registrationScreen.fxml"));
