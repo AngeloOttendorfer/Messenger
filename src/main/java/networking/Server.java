@@ -9,10 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server implements  Runnable{
-    private List<Client> clients;
+    private List<String> clients = new ArrayList<>();
 
-    public Server() {
-        clients = new ArrayList<>();
+    public List<String> getClients() {
+        return clients;
     }
 
     public void run() {
@@ -28,7 +28,7 @@ public class Server implements  Runnable{
         }
     }
 
-    public void addClient(Client client) {
+    /*public void addClient(Client client) {
         clients.add(client);
         if (clients.contains(client)) {
             System.out.println("Client exist");
@@ -36,17 +36,17 @@ public class Server implements  Runnable{
         } else {
             System.out.println("Client was not added to the list");
         }
-    }
+    }*/
 
     public void removeClient(Client client) {
         clients.remove(client);
     }
 
-    public void broadcastMessage(String message) {
+    /*public void broadcastMessage(String message) {
         for (Client client : clients) {
             client.sendMessage(message);
         }
-    }
+    }*/
 
     public void addUserData(String username, String password, String email) {
         Client data = new Client(username, password, email);
@@ -74,6 +74,7 @@ public class Server implements  Runnable{
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts[0].equals(username) && parts[1].equals(password)) {
+                    this.clients.add(username);
                     return true;
                 }
             }

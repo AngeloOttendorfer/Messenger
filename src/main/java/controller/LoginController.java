@@ -9,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import networking.Client;
 import networking.Server;
 
 import java.io.IOException;
@@ -29,9 +28,8 @@ public class LoginController {
     public void login() throws IOException {
         String username = tf_username.getText();
         String password = pf_pwd.getText();
-        FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chatScreen.fxml"));
-        Stage chat = (Stage) btn_login.getScene().getWindow();
-        if(!server.containsUserData(username,password)){
+
+        if(!server.containsUserData(username, password)){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error");
             alert.setHeaderText("An Error occurred");
@@ -43,6 +41,9 @@ public class LoginController {
             //Client client = new Client(username, password);
             //client.start();
             //client.connectToServer("127.0.0.1", 8000);// client-server connection
+
+            FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chatScreen.fxml"));
+            Stage chat = (Stage) btn_login.getScene().getWindow();
             chat.setScene(new Scene(chatLoader.load()));
         }
 

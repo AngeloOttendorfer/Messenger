@@ -1,21 +1,23 @@
 package controller;
 
-import com.example.messenger.MessengerApplication;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
+import networking.Server;
 
-import java.io.IOException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 
 public class ChatController{
     @FXML
     private TextField tf_msg;
+    @FXML
+    private TextArea ta_username;
     @FXML
     private TextArea ta_send;
     @FXML
@@ -23,6 +25,7 @@ public class ChatController{
     @FXML
    private ImageView send_button;
 
+    private final Server server = new Server();
 
     public void handleSendButton(){
         send_button.setOnMouseClicked(event -> {
@@ -43,6 +46,11 @@ public class ChatController{
 
     @FXML
     public void initialize(){
+        List<String> clients = server.getClients();
+        if(clients.size() > 0){
+            ta_username.setStyle("-fx-text-fill: white;");
+            ta_username.appendText(clients.get(clients.size() - 1));
+        }
         handleSendButton();
         handleEnterKey();
     }
