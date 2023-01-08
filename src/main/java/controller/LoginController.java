@@ -3,6 +3,7 @@ package controller;
 import com.example.messenger.MessengerApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -43,8 +44,12 @@ public class LoginController {
             //client.connectToServer("127.0.0.1", 8000);// client-server connection
 
             FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chatScreen.fxml"));
-            Stage chat = (Stage) btn_login.getScene().getWindow();
-            chat.setScene(new Scene(chatLoader.load()));
+            Parent root = chatLoader.load();
+            ChatController chatController = chatLoader.getController();
+            chatController.setUsername(username);
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
         }
 
     }

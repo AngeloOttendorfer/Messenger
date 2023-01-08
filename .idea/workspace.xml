@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="extended the chatScreen gui to profile picture for the user. Next-up is to be able to send a message to all clients and implement the server thread correctly.">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="updated project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,13 +79,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger/images" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/example/messenger/images" />
       <recent name="$PROJECT_DIR$/src/main/java/images" />
     </key>
   </component>
@@ -192,7 +190,8 @@
       <workItem from="1672757582334" duration="5553000" />
       <workItem from="1672812267208" duration="12779000" />
       <workItem from="1672925650506" duration="25832000" />
-      <workItem from="1673084507903" duration="29000" />
+      <workItem from="1673084507903" duration="682000" />
+      <workItem from="1673171639589" duration="3916000" />
     </task>
     <task id="LOCAL-00001" summary="updated MessengerApplication.java">
       <created>1671812092794</created>
@@ -264,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672998083595</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated project">
+      <created>1673084563672</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673084563672</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,9 +295,9 @@
     <MESSAGE value="first design and functionality added to ChatController.java and chatScreen.fxml" />
     <MESSAGE value="added the messenger.png and user_data.txt files" />
     <MESSAGE value="added core functionality for the client and the server for network communication. Additionally, a ServerManager.java class which handles a server session." />
-    <MESSAGE value="updated project" />
     <MESSAGE value="extended the chatScreen gui to profile picture for the user. Next-up is to be able to send a message to all clients and implement the server thread correctly." />
-    <option name="LAST_COMMIT_MESSAGE" value="extended the chatScreen gui to profile picture for the user. Next-up is to be able to send a message to all clients and implement the server thread correctly." />
+    <MESSAGE value="updated project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -307,7 +313,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/controller/LoginController.java</url>
-          <line>27</line>
+          <line>28</line>
           <properties class="controller.LoginController" method="login">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -323,6 +329,15 @@
           </properties>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/ChatController.java</url>
+          <line>57</line>
+          <properties class="controller.ChatController" method="setUsername">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controller/ChatController.java</url>
           <line>55</line>
@@ -330,13 +345,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/controller/LoginController.java</url>
-          <line>49</line>
+          <line>54</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/networking/Server.java</url>
           <line>78</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/ChatController.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -6,18 +6,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import networking.Server;
 
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 
 public class ChatController{
     @FXML
     private TextField tf_msg;
     @FXML
-    private TextArea ta_username;
+    private Label lbl_username;
     @FXML
     private TextArea ta_send;
     @FXML
@@ -46,13 +40,17 @@ public class ChatController{
 
     @FXML
     public void initialize(){
-        List<String> clients = server.getClients();
+        /*List<String> clients = server.getClients();
         if(clients.size() > 0){
             ta_username.setStyle("-fx-text-fill: white;");
             ta_username.appendText(clients.get(clients.size() - 1));
-        }
+        }*/
         handleSendButton();
         handleEnterKey();
+    }
+
+    public void setUsername(String username){
+        lbl_username.setText(username);
     }
 
 
