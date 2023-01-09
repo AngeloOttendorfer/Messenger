@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import networking.Client;
 import networking.Server;
 
 
@@ -20,10 +21,14 @@ public class ChatController{
    private ImageView send_button;
 
     private final Server server = new Server();
+    private final Client client = new Client();
+    private final Thread serverThread = new Thread(server);
+    private final Thread clientThread = new Thread(client);
 
     public void handleSendButton(){
         send_button.setOnMouseClicked(event -> {
             if(!tf_msg.getText().isEmpty()){
+                server.setMessage(tf_msg.getText());
                 ta_chat.appendText(tf_msg.getText() + "\n");
             }
         });
@@ -33,6 +38,7 @@ public class ChatController{
         tf_msg.setOnKeyPressed(event -> {
             String message = tf_msg.getText();
             if ((event.getCode() == KeyCode.ENTER) && (!message.isEmpty())) {
+                server.setMessage(tf_msg.getText());
                 ta_chat.appendText(message + "\n");
             }
         });
@@ -40,11 +46,9 @@ public class ChatController{
 
     @FXML
     public void initialize(){
-        /*List<String> clients = server.getClients();
-        if(clients.size() > 0){
-            ta_username.setStyle("-fx-text-fill: white;");
-            ta_username.appendText(clients.get(clients.size() - 1));
-        }*/
+        clientThread.start();
+        serverThread.start();
+        server.setClient(lbl_username.getText());
         handleSendButton();
         handleEnterKey();
     }
@@ -54,18 +58,10 @@ public class ChatController{
     }
 
 
-    public void sendMessage(){
+    public void sendMessage(String username){
         String message = tf_msg.getText();
         if(!message.isEmpty()){
             ta_chat.appendText(tf_msg.getText()+ "\n");
         }
     }
-
-    /*public void log_out() throws IOException {
-        //server.removeClient(client);
-        FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
-        Stage welcome = (Stage) btn_logout.getScene().getWindow();
-        welcome.setScene(new Scene(welcomeLoader.load()));
-
-    }*/
 }

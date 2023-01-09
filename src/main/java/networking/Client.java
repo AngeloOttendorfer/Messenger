@@ -15,6 +15,10 @@ public class Client extends Thread{
     private PrintWriter writer;
     private Scanner reader;
 
+    public Client(){
+
+    }
+
     public Client(String username, String password) {
         this.username = username;
         this.password = password;
@@ -42,25 +46,15 @@ public class Client extends Thread{
         }
     }
 
-    /*public void initClient(){
-        server.addClient(this); // add this client to the list of connected clients
-
-        // send a message to all connected clients to inform them that a new client has joined the chat
-        server.broadcastMessage(username + " has joined the chat");
-    }*/
-
-    /*public void run() {
-
-
-        // lists for messages from this client and broadcast them to all connected clients
-        while (reader.hasNextLine()) {
-            String message = reader.nextLine();
-            server.broadcastMessage(username + ": " + message);
+    public void run() {
+        try {
+            socket = new Socket("127.0.0.1", 8000);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
-        //server.removeClient(this); // remove this client from the list of connected clients
         //server.broadcastMessage(username + " has left the chat");
-    }*/
+    }
 
     public String getUsername() {
         return username;

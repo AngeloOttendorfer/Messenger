@@ -6,44 +6,32 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Server implements  Runnable{
-    private List<String> clients = new ArrayList<>();
-
-    public List<String> getClients() {
-        return clients;
-    }
+    private String message = "";
+    private ArrayList<String> clients = new ArrayList<>();
+    private Socket socket;
 
     public void run() {
         try (ServerSocket serverSocket = new ServerSocket(8000)){
             while (true) {
-                Socket socket = serverSocket.accept();
-                //Client client = new Client(socket, this);
-                //client.start();
-                //clients.add(client);
+                socket = serverSocket.accept();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    /*public void addClient(Client client) {
-        clients.add(client);
-        if (clients.contains(client)) {
-            System.out.println("Client exist");
-            //clients.remove(client);
-        } else {
-            System.out.println("Client was not added to the list");
-        }
-    }*/
+    public void setClient(String username) {
+        clients.add(username);
+    }
 
-    public void removeClient(Client client) {
-        clients.remove(client);
+    public void setMessage(String message){
+        this.message = message;
     }
 
     /*public void broadcastMessage(String message) {
-        for (Client client : clients) {
+        for (String client : clients) {
             client.sendMessage(message);
         }
     }*/
@@ -74,7 +62,6 @@ public class Server implements  Runnable{
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 if (parts[0].equals(username) && parts[1].equals(password)) {
-                    this.clients.add(username);
                     return true;
                 }
             }
@@ -94,7 +81,7 @@ public class Server implements  Runnable{
         alert.showAndWait();
     }
 
-    public static void main(String[] args) throws IOException {
+    /*public static void main(String[] args) throws IOException {
         new Server().run();
-    }
+    }*/
 }
