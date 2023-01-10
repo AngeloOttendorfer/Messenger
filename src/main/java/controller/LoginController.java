@@ -26,6 +26,12 @@ public class LoginController {
 
     private Server server = new Server();
 
+    /**
+     * @brief this function is called whenever btn_login (login button in the GUI) is pressed,
+     *        afterwards it checks if the user data that was entered by the user is valid, hence
+     *        included in the user_data.txt file. An Alert is popping up if the entered data is invalid
+     * @throws IOException
+     */
     public void login() throws IOException {
         String username = tf_username.getText();
         String password = pf_pwd.getText();
@@ -54,6 +60,10 @@ public class LoginController {
 
     }
 
+    /**
+     * @brief this method is called if btn_return is pressed in the GUI, afterwards it switches over to the welcomeScreen
+     * @throws IOException
+     */
     public void goBack()throws IOException{
         FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
         Stage welcome = (Stage) btn_return.getScene().getWindow();

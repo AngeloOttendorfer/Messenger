@@ -27,6 +27,10 @@ public class RegistrationController {
     private Server server = new Server();
 
 
+    /**
+     * @brief this method is called when the btn_signIn is pressed in the GUI, afterwards sends the user data, including
+     *        the username, email and password
+     */
     public void registration() {
         String username = "";
         String password = "";
@@ -46,6 +50,10 @@ public class RegistrationController {
         server.addUserData(username, password, email);
     }
 
+    /**
+     * @brief this method is called if btn_return is pressed in the GUI, afterwards it switches over to the welcomeScreen
+     * @throws IOException
+     */
     public void goBack() throws IOException{
         FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
         Stage welcome = (Stage) btn_return.getScene().getWindow();

@@ -25,6 +25,11 @@ public class ChatController{
     private final Thread serverThread = new Thread(server);
     private final Thread clientThread = new Thread(client);
 
+    /**
+     * @brief this method is called in the initialize method of this controller class that handles the send image button
+     *        So whenever the send_button in the GUI is clicked, the message typed in in the textfield is displayed in
+     *        the textArea of the chat screen.
+     */
     public void handleSendButton(){
         send_button.setOnMouseClicked(event -> {
             if(!tf_msg.getText().isEmpty()){
@@ -34,6 +39,10 @@ public class ChatController{
         });
     }
 
+    /**
+     * @brief this method is called in the initialize method of this controller class that sends the message that was typed in
+     * in the textField to the textArea of the chat screen when the enter key is pressed
+     */
     public void handleEnterKey() {
         tf_msg.setOnKeyPressed(event -> {
             String message = tf_msg.getText();
@@ -44,6 +53,9 @@ public class ChatController{
         });
     }
 
+    /**
+     * @brief this method is called immediately when the chatScreen.fxml is loaded
+     */
     @FXML
     public void initialize(){
         clientThread.start();
@@ -53,10 +65,13 @@ public class ChatController{
         handleEnterKey();
     }
 
+    /**
+     * @brief this method sets the username that was entered and acknowledged from the loginScreen in the chat screen
+     * @param username the username of the correct user of the messenger application
+     */
     public void setUsername(String username){
         lbl_username.setText(username);
     }
-
 
     public void sendMessage(String username){
         String message = tf_msg.getText();
