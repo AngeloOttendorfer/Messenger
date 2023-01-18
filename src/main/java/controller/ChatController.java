@@ -1,12 +1,16 @@
 package controller;
 
+import com.example.messenger.MessengerApplication;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.NodeOrientation;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import networking.User;
 
 import java.io.BufferedReader;
@@ -31,6 +35,8 @@ public class ChatController extends Thread implements Initializable {
     private TextArea ta_chat;
     @FXML
    private ImageView send_button;
+    @FXML
+    private Button btn_logout;
 
     BufferedReader reader;
     PrintWriter writer;
@@ -100,6 +106,13 @@ public class ChatController extends Thread implements Initializable {
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
             System.exit(0);
         }
+    }
+
+    public void logout() throws IOException {
+        FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
+        Stage login = (Stage) btn_logout.getScene().getWindow();
+        login.setResizable(false);
+        login.setScene(new Scene(welcomeLoader.load()));
     }
 
     public void setUserLabel(){

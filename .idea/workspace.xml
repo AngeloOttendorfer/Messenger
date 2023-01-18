@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="added some javadoc comments to the methods in the controller classes">
+    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="updated project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/status/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/status/ChatServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/status/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +239,7 @@
       <workItem from="1673981595869" duration="13694000" />
       <workItem from="1674049259298" duration="1002000" />
       <workItem from="1674054633119" duration="35000" />
+      <workItem from="1674054913588" duration="4646000" />
     </task>
     <task id="LOCAL-00001" summary="updated MessengerApplication.java">
       <created>1671812092794</created>
@@ -346,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673373683861</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated project">
+      <created>1674055010600</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674055010600</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,8 +373,8 @@
     <MESSAGE value="added core functionality for the client and the server for network communication. Additionally, a ServerManager.java class which handles a server session." />
     <MESSAGE value="extended the chatScreen gui to profile picture for the user. Next-up is to be able to send a message to all clients and implement the server thread correctly." />
     <MESSAGE value="managed to set the username on the ChatScreen (next to the profile icon)" />
-    <MESSAGE value="updated project" />
     <MESSAGE value="added some javadoc comments to the methods in the controller classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some javadoc comments to the methods in the controller classes" />
+    <MESSAGE value="updated project" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated project" />
   </component>
 </project>

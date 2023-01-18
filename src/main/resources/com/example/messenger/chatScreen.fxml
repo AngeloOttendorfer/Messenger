@@ -10,6 +10,9 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.shape.Line?>
 
+<?import javafx.scene.control.Button?>
+
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="631.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatController">
 <children>
    <Pane layoutY="-6.0" prefHeight="695.0" prefWidth="260.0" style="-fx-background-color: #1D232A;">
@@ -21,6 +24,7 @@
                <Image url="@images/profile.png" />
             </image>
          </ImageView>
+         <Button fx:id="btn_logout" layoutX="23.0" layoutY="649.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="206.0" text="logout" style="-fx-background-color: #orange;"/>
       </children>
    </Pane>
    <TextArea fx:id="ta_send" layoutX="255.0" layoutY="619.0" prefHeight="73.0" prefWidth="383.0" editable="false"/>
