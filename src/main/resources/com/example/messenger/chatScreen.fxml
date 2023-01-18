@@ -24,8 +24,8 @@
       </children>
    </Pane>
    <TextArea fx:id="ta_send" layoutX="255.0" layoutY="619.0" prefHeight="73.0" prefWidth="383.0" editable="false"/>
-   <TextField fx:id="tf_msg" layoutX="302.0" layoutY="643.0" prefHeight="26.0" prefWidth="272.0" promptText="Type your message..." />
-   <ImageView fx:id="send_button" fitHeight="42.0" fitWidth="49.0" layoutX="582.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true">
+   <TextField fx:id="tf_msg" layoutX="302.0" layoutY="643.0" prefHeight="26.0" prefWidth="272.0" onKeyPressed="#sendMessageByKey" promptText="Type your message..." />
+   <ImageView fx:id="send_button" fitHeight="42.0" fitWidth="49.0" layoutX="582.0" layoutY="635.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleSendEvent">
       <image>
          <Image url="@images/send-button.jpg" />
       </image>

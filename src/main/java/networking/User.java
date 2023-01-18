@@ -1,8 +1,16 @@
-package status;
+package networking;
 
 public class User {
-    private String username;
+
+    public String username;
+    public String password;
+    public String email;
+
     private boolean isOnline;
+
+    public User(){
+
+    }
 
     public User(String username) {
         this.username = username;

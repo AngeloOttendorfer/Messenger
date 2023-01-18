@@ -7,37 +7,10 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
 
-public class Server implements  Runnable{
-    private String message = "";
-    private ArrayList<String> clients = new ArrayList<>();
-    private Socket socket;
-
-    public void run() {
-        try (ServerSocket serverSocket = new ServerSocket(8000)){
-            while (true) {
-                socket = serverSocket.accept();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void setClient(String username) {
-        clients.add(username);
-    }
-
-    public void setMessage(String message){
-        this.message = message;
-    }
-
-    /*public void broadcastMessage(String message) {
-        for (String client : clients) {
-            client.sendMessage(message);
-        }
-    }*/
+public class Server{
+    private static ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
 
     public void addUserData(String username, String password, String email) {
-        Client data = new Client(username, password, email);
 
         if (containsUserData(username, password)) {
             showException(new RuntimeException("user data already available"));
@@ -46,7 +19,7 @@ public class Server implements  Runnable{
         try {
             File file = new File("user_data.txt");
             FileWriter writer = new FileWriter(file, true); // true for appending new data in the existing file
-            writer.write(data.getUsername() + "," + data.getPassword() + "," + data.getEmail() + "\n");
+            writer.write(username + "," + password + "," + email + "\n");
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -81,7 +54,21 @@ public class Server implements  Runnable{
         alert.showAndWait();
     }
 
-    /*public static void main(String[] args) throws IOException {
-        new Server().run();
-    }*/
+    public static void main(String[] args) {
+        ServerSocket serverSocket;
+        Socket socket;
+        try {
+            serverSocket = new ServerSocket(3000);
+            while(true) {
+                System.out.println("Waiting for clients...");
+                socket = serverSocket.accept();
+                System.out.println("Connected");
+                ClientHandler clientThread = new ClientHandler(socket, clients);
+                clients.add(clientThread);
+                clientThread.start();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

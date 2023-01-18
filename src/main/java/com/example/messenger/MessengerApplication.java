@@ -15,6 +15,7 @@ public class MessengerApplication extends Application {
         Parent root = welcomeLoader.load();
         stage.setScene(new Scene(root));
         stage.setTitle("Messenger");
+        stage.setResizable(false);
         stage.show();
     }
 

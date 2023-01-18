@@ -11,8 +11,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import networking.Server;
+import networking.User;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class LoginController {
     @FXML
@@ -23,8 +25,12 @@ public class LoginController {
     private Button btn_login;
     @FXML
     private Button btn_return;
-
     private Server server = new Server();
+
+    public static String username;
+    public static String password;
+    //public static ArrayList<User> loggedInUser = new ArrayList<>();
+    public static ArrayList<User> users = new ArrayList<User>();
 
     /**
      * @brief this function is called whenever btn_login (login button in the GUI) is pressed,
@@ -33,8 +39,8 @@ public class LoginController {
      * @throws IOException
      */
     public void login() throws IOException {
-        String username = tf_username.getText();
-        String password = pf_pwd.getText();
+        username = tf_username.getText();
+        password = pf_pwd.getText();
 
         if(!server.containsUserData(username, password)){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -45,19 +51,17 @@ public class LoginController {
             alert.showAndWait();
         }
         else{
-            //Client client = new Client(username, password);
-            //client.start();
-            //client.connectToServer("127.0.0.1", 8000);// client-server connection
-
+            Stage stage = (Stage) tf_username.getScene().getWindow();
             FXMLLoader chatLoader = new FXMLLoader(MessengerApplication.class.getResource("chatScreen.fxml"));
             Parent root = chatLoader.load();
-            ChatController chatController = chatLoader.getController();
-            chatController.setUsername(username);
-            Stage stage = new Stage();
+            stage.setTitle(username + "");
+            stage.setOnCloseRequest(event -> {
+                System.exit(0);
+            });
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
         }
-
     }
 
     /**
@@ -67,6 +71,7 @@ public class LoginController {
     public void goBack()throws IOException{
         FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
         Stage welcome = (Stage) btn_return.getScene().getWindow();
+        welcome.setResizable(false);
         welcome.setScene(new Scene(welcomeLoader.load()));
     }
 }

@@ -1,5 +1,7 @@
 package status;
 
+import networking.User;
+
 import java.util.ArrayList;
 import java.util.List;
 

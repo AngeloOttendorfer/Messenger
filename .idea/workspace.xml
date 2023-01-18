@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="managed to set the username on the ChatScreen (next to the profile icon)">
+    <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="added some javadoc comments to the methods in the controller classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Client.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/networking/ServerManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/status/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/status/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/status/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +71,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -94,12 +100,25 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.MessengerApplication">
-    <configuration name="MessengerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MessengerApplication" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.messenger.MessengerApplication" />
       <module name="Messenger.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.messenger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="networking.Server" />
+      <module name="Messenger.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="networking.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,8 +168,15 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.MessengerApplication" />
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Gradle.Messenger [clean]" />
+      <item itemvalue="Gradle.Messenger [dependencies]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.MessengerApplication" />
         <item itemvalue="Gradle.Messenger [dependencies]" />
         <item itemvalue="Gradle.Messenger [clean]" />
@@ -202,7 +228,25 @@
       <workItem from="1673248964428" duration="115000" />
       <workItem from="1673249107352" duration="41000" />
       <workItem from="1673249176623" duration="133000" />
-      <workItem from="1673249343689" duration="4039000" />
+      <workItem from="1673249343689" duration="4192000" />
+      <workItem from="1673273536534" duration="2671000" />
+      <workItem from="1673282851525" duration="2558000" />
+      <workItem from="1673289301497" duration="672000" />
+      <workItem from="1673290181855" duration="463000" />
+      <workItem from="1673290815348" duration="79000" />
+      <workItem from="1673290960158" duration="588000" />
+      <workItem from="1673369804751" duration="4198000" />
+      <workItem from="1673446778425" duration="40000" />
+      <workItem from="1673898790953" duration="112000" />
+      <workItem from="1673898966652" duration="50000" />
+      <workItem from="1673899119075" duration="34000" />
+      <workItem from="1673899177607" duration="61000" />
+      <workItem from="1673899280706" duration="174000" />
+      <workItem from="1673899498416" duration="156000" />
+      <workItem from="1673899724109" duration="1978000" />
+      <workItem from="1673981595869" duration="13694000" />
+      <workItem from="1674049259298" duration="1002000" />
+      <workItem from="1674054633119" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="updated MessengerApplication.java">
       <created>1671812092794</created>
@@ -288,7 +332,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673177078366</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated project">
+      <created>1673256952939</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1673256952939</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added some javadoc comments to the methods in the controller classes">
+      <created>1673373683861</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673373683861</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,8 +372,9 @@
     <MESSAGE value="added the messenger.png and user_data.txt files" />
     <MESSAGE value="added core functionality for the client and the server for network communication. Additionally, a ServerManager.java class which handles a server session." />
     <MESSAGE value="extended the chatScreen gui to profile picture for the user. Next-up is to be able to send a message to all clients and implement the server thread correctly." />
-    <MESSAGE value="updated project" />
     <MESSAGE value="managed to set the username on the ChatScreen (next to the profile icon)" />
-    <option name="LAST_COMMIT_MESSAGE" value="managed to set the username on the ChatScreen (next to the profile icon)" />
+    <MESSAGE value="updated project" />
+    <MESSAGE value="added some javadoc comments to the methods in the controller classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some javadoc comments to the methods in the controller classes" />
   </component>
 </project>

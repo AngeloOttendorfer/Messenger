@@ -1,14 +1,26 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.geometry.NodeOrientation;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
-import networking.Client;
-import networking.Server;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
+import networking.User;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import static controller.LoginController.users;
 
 
-public class ChatController{
+public class ChatController extends Thread implements Initializable {
     @FXML
     private TextField tf_msg;
     @FXML
@@ -20,63 +32,83 @@ public class ChatController{
     @FXML
    private ImageView send_button;
 
-    private final Server server = new Server();
-    private final Client client = new Client();
-    private final Thread serverThread = new Thread(server);
-    private final Thread clientThread = new Thread(client);
+    BufferedReader reader;
+    PrintWriter writer;
+    Socket socket;
 
-    /**
-     * @brief this method is called in the initialize method of this controller class that handles the send image button
-     *        So whenever the send_button in the GUI is clicked, the message typed in in the textfield is displayed in
-     *        the textArea of the chat screen.
-     */
-    public void handleSendButton(){
-        send_button.setOnMouseClicked(event -> {
-            if(!tf_msg.getText().isEmpty()){
-                server.setMessage(tf_msg.getText());
-                ta_chat.appendText(tf_msg.getText() + "\n");
-            }
-        });
-    }
 
-    /**
-     * @brief this method is called in the initialize method of this controller class that sends the message that was typed in
-     * in the textField to the textArea of the chat screen when the enter key is pressed
-     */
-    public void handleEnterKey() {
-        tf_msg.setOnKeyPressed(event -> {
-            String message = tf_msg.getText();
-            if ((event.getCode() == KeyCode.ENTER) && (!message.isEmpty())) {
-                server.setMessage(tf_msg.getText());
-                ta_chat.appendText(message + "\n");
-            }
-        });
-    }
-
-    /**
-     * @brief this method is called immediately when the chatScreen.fxml is loaded
-     */
-    @FXML
-    public void initialize(){
-        clientThread.start();
-        serverThread.start();
-        server.setClient(lbl_username.getText());
-        handleSendButton();
-        handleEnterKey();
-    }
-
-    /**
-     * @brief this method sets the username that was entered and acknowledged from the loginScreen in the chat screen
-     * @param username the username of the correct user of the messenger application
-     */
-    public void setUsername(String username){
-        lbl_username.setText(username);
-    }
-
-    public void sendMessage(String username){
-        String message = tf_msg.getText();
-        if(!message.isEmpty()){
-            ta_chat.appendText(tf_msg.getText()+ "\n");
+    public void connectSocket() {
+        try {
+            socket = new Socket("localhost", 3000);
+            System.out.println("Socket is connected with server!");
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            writer = new PrintWriter(socket.getOutputStream(), true);
+            this.start();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
+    @Override
+    public void run() {
+        try {
+            while (true) {
+                String msg = reader.readLine();
+                String[] tokens = msg.split(" ");
+                String cmd = tokens[0];
+                System.out.println(cmd);
+                StringBuilder fulmsg = new StringBuilder();
+                for(int i = 1; i < tokens.length; i++) {
+                    fulmsg.append(tokens[i]);
+                }
+                System.out.println(fulmsg);
+                if (cmd.equalsIgnoreCase(LoginController.username + ":")) {
+                    continue;
+                } else if(fulmsg.toString().equalsIgnoreCase("bye")) {
+                    break;
+                }
+                ta_chat.appendText(msg + "\n");
+            }
+            reader.close();
+            writer.close();
+            socket.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void handleSendEvent(MouseEvent event) {
+        send();
+        for(User user : users) {
+            System.out.println(user.username);
+        }
+    }
+
+    @FXML
+    public void sendMessageByKey(KeyEvent event) {
+        if (event.getCode().toString().equals("ENTER")) {
+            send();
+        }
+    }
+
+    public void send() {
+        String msg = tf_msg.getText();
+        writer.println(LoginController.username + ": " + msg);
+        ta_chat.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
+        ta_chat.appendText("Me: " + msg + "\n");
+        tf_msg.setText("");
+        if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
+            System.exit(0);
+        }
+    }
+
+    public void setUserLabel(){
+        lbl_username.setText(LoginController.username);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        connectSocket();
+        setUserLabel();
     }
 }

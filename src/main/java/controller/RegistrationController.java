@@ -4,6 +4,7 @@ import com.example.messenger.MessengerApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -31,7 +32,7 @@ public class RegistrationController {
      * @brief this method is called when the btn_signIn is pressed in the GUI, afterwards sends the user data, including
      *        the username, email and password
      */
-    public void registration() {
+    public void registration() throws IOException{
         String username = "";
         String password = "";
         String email = "";
@@ -47,7 +48,23 @@ public class RegistrationController {
             password = pf_pwd.getText();
         }
 
-        server.addUserData(username, password, email);
+        if(server.containsUserData(username, password)){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("An Error occurred");
+            alert.setContentText("Username already exists");
+
+            alert.showAndWait();
+        }
+
+        else{
+            server.addUserData(username, password, email);
+
+            FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
+            Stage welcome = (Stage) btn_return.getScene().getWindow();
+            welcome.setResizable(false);
+            welcome.setScene(new Scene(welcomeLoader.load()));
+        }
     }
 
     /**
@@ -57,6 +74,7 @@ public class RegistrationController {
     public void goBack() throws IOException{
         FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
         Stage welcome = (Stage) btn_return.getScene().getWindow();
+        welcome.setResizable(false);
         welcome.setScene(new Scene(welcomeLoader.load()));
     }
 }
