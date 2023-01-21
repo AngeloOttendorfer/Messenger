@@ -10,14 +10,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class WelcomeController{
-
+    /**
+     * button to switch to RegistrationScreen
+     */
     @FXML
     private Button btn_register;
+
+    /**
+     *button to switch to LoginScreen
+     */
     @FXML
     private Button btn_login;
 
     /**
-     * @brief this method is called when btn_register is pressed in the GUI, afterwards it switches over to the registration screen
+     * this method is called when btn_register is pressed in the GUI, afterwards it switches over to the registration screen
      * @throws IOException
      */
     public void registration() throws IOException {
@@ -27,7 +33,7 @@ public class WelcomeController{
     }
 
     /**
-     * @brief this method is called when btn_login is pressed in the GUI, afterwards it switches over to the login screen
+     * this method is called when btn_login is pressed in the GUI, afterwards it switches over to the login screen
      * @throws IOException
      */
     public void login() throws IOException {

@@ -14,22 +14,37 @@ import networking.Server;
 import java.io.IOException;
 
 public class RegistrationController {
+    /**
+     * text-field for username registration
+     */
     @FXML
     private TextField tf_username;
+
+    /**
+     * text-field for email registration
+     */
     @FXML
     private TextField tf_email;
+
+    /**
+     * text-field for password registration
+     */
     @FXML
     private PasswordField pf_pwd;
-    @FXML
-    private Button btn_signIn;
+
+    /**
+     * button to return to the welcomeScreen
+     */
     @FXML
     private Button btn_return;
 
+    /**
+     * initializing the server to use the containsUserData method and the addUserData method
+     */
     private Server server = new Server();
 
-
     /**
-     * @brief this method is called when the btn_signIn is pressed in the GUI, afterwards sends the user data, including
+     * this method is called when the btn_signIn is pressed in the GUI, afterwards it sends the user data, including
      *        the username, email and password
      */
     public void registration() throws IOException{
@@ -68,7 +83,7 @@ public class RegistrationController {
     }
 
     /**
-     * @brief this method is called if btn_return is pressed in the GUI, afterwards it switches over to the welcomeScreen
+     * this method is called if btn_return is pressed in the GUI, afterwards it switches over to the welcomeScreen
      * @throws IOException
      */
     public void goBack() throws IOException{

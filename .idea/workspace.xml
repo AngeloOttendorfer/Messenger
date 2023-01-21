@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="38d037be-1df8-47ed-9066-7ddc48f76d35" name="Changes" comment="updated project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/messenger/MessengerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/networking/ClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/ClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/networking/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/networking/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/networking/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/status/ChatClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/status/ChatServer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/messenger/chatScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user_data.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +72,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -168,10 +183,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Messenger [dependencies]" />
+        <item itemvalue="Gradle.Messenger [clean]" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.MessengerApplication" />
         <item itemvalue="Gradle.Messenger [dependencies]" />
-        <item itemvalue="Gradle.Messenger [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -240,6 +256,8 @@
       <workItem from="1674049259298" duration="1002000" />
       <workItem from="1674054633119" duration="35000" />
       <workItem from="1674054913588" duration="4646000" />
+      <workItem from="1674218777362" duration="9923000" />
+      <workItem from="1674228854514" duration="29495000" />
     </task>
     <task id="LOCAL-00001" summary="updated MessengerApplication.java">
       <created>1671812092794</created>

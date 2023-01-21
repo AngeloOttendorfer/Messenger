@@ -8,8 +8,14 @@ import java.net.Socket;
 import java.util.ArrayList;
 
 public class Server{
-    private static ArrayList<ClientHandler> clients = new ArrayList<ClientHandler>();
+    private static final ArrayList<ClientHandler> clients = new ArrayList<>();
 
+    /**
+     * writes the registration data into a file called "user_data.txt"
+     * @param username username registration for later login
+     * @param password password registration for later login
+     * @param email email registration
+     */
     public void addUserData(String username, String password, String email) {
 
         if (containsUserData(username, password)) {
@@ -26,6 +32,13 @@ public class Server{
         }
     }
 
+
+    /**
+     * checks if the username and the password are included in the "user_data.txt"
+     * @param username the username to acknowledge login
+     * @param password the password to acknowledge login
+     * @return true if acknowledged and false if not acknowledged
+     */
     public boolean containsUserData(String username, String password){
         // read user data from file
         try {
@@ -45,6 +58,10 @@ public class Server{
         return false;
     }
 
+    /**
+     * shows an error if the login data entered is not valid
+     * @param e Exception object
+     */
     public void showException(RuntimeException e) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error");
@@ -54,6 +71,9 @@ public class Server{
         alert.showAndWait();
     }
 
+    /**
+     * instantiates a serverSocket with port 3000 and waits for a client to be connected
+     */
     public static void main(String[] args) {
         ServerSocket serverSocket;
         Socket socket;

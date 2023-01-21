@@ -11,31 +11,47 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import networking.Server;
-import networking.User;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class LoginController {
+    /**
+     * text-field for username login
+     */
     @FXML
     private TextField tf_username;
-    @FXML
-    private PasswordField pf_pwd;
-    @FXML
-    private Button btn_login;
-    @FXML
-    private Button btn_return;
-    private Server server = new Server();
-
-    public static String username;
-    public static String password;
-    //public static ArrayList<User> loggedInUser = new ArrayList<>();
-    public static ArrayList<User> users = new ArrayList<User>();
 
     /**
-     * @brief this function is called whenever btn_login (login button in the GUI) is pressed,
-     *        afterwards it checks if the user data that was entered by the user is valid, hence
-     *        included in the user_data.txt file. An Alert is popping up if the entered data is invalid
+     * password field for login
+     */
+    @FXML
+    private PasswordField pf_pwd;
+
+    /**
+     * button to return to the welcomeScreen
+     */
+    @FXML
+    private Button btn_return;
+
+    /**
+     * initializing the server to check for valid login data using the containsUserData method
+     */
+    private final Server server = new Server();
+
+    /**
+     * the username to be logged in with
+     */
+    public static String username;
+
+    /**
+     * the password to be logged in with
+     */
+    public String password;
+
+    /**
+     * this function is called whenever btn_login (login button in the GUI) is pressed,
+     * afterwards it checks if the user data that was entered by the user is valid, hence
+     * included in the user_data.txt file. An Alert is popping up if the entered data is invalid
      * @throws IOException
      */
     public void login() throws IOException {
@@ -65,7 +81,7 @@ public class LoginController {
     }
 
     /**
-     * @brief this method is called if btn_return is pressed in the GUI, afterwards it switches over to the welcomeScreen
+     * this method is called if btn_return is pressed in the GUI, afterwards it returns to the welcomeScreen
      * @throws IOException
      */
     public void goBack()throws IOException{
