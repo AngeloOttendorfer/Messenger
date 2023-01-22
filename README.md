@@ -9,6 +9,9 @@ Nermina Salkic-ic21b114
 ## Projektwahl: Messenger Chat (MSN)
 miteinander Chatten können. Dort sollen die Mitarbeiter sehen wer aller online ist und einen Chat starten.
 
+##Anwendung
+Zuerst den Server starten (Server.java in Package Networking) dann MessengerApplication.java
+
 ## Must Have Features (Genügen - 4) -> Erledigt
 * GUI
 * Readme
