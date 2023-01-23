@@ -1,6 +1,8 @@
 package controller;
 
 import com.example.messenger.MessengerApplication;
+import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import networking.ClientList;
 
 import java.io.*;
 import java.net.Socket;
@@ -57,6 +60,10 @@ public class ChatController extends Thread implements Initializable {
      */
     Socket socket;
 
+    @FXML
+    private ListView<String> userList;
+    private ObservableList<String> clients;
+
     /**
      * connect to the server by passing in the host and the port number in the socket instance
      * create a BufferedReader and PrintWriter in order to send messages to all connected clients
@@ -80,6 +87,7 @@ public class ChatController extends Thread implements Initializable {
      */
     @Override
     public void run() {
+        sendUsername();
         try {
             while (true) {
                 String msg = reader.readLine();
@@ -96,7 +104,18 @@ public class ChatController extends Thread implements Initializable {
                 } else if (fulmsg.toString().equalsIgnoreCase("bye")) {
                     break;
                 }
-                ta_chat.appendText(msg + "\n");
+
+                if(tokens.length == 1){
+                    Platform.runLater(()->{
+                        clients = ClientList.getInstance().getClients();
+                        ClientList.getInstance().addClient(msg);
+                        //clients.add(msg);
+                        userList.setItems(clients);
+                    });
+                }
+                else {
+                    Platform.runLater(() -> ta_chat.appendText(msg + "\n"));
+                }
             }
             reader.close();
             writer.close();
@@ -140,6 +159,10 @@ public class ChatController extends Thread implements Initializable {
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
             System.exit(0);
         }
+    }
+
+    public void sendUsername(){
+        writer.println(LoginController.username);
     }
 
     /**
