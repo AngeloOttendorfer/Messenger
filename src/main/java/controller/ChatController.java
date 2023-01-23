@@ -148,9 +148,10 @@ public class ChatController extends Thread implements Initializable {
      */
     public void logout() throws IOException {
         FXMLLoader welcomeLoader = new FXMLLoader(MessengerApplication.class.getResource("welcomeScreen.fxml"));
-        Stage login = (Stage) btn_logout.getScene().getWindow();
-        login.setResizable(false);
-        login.setScene(new Scene(welcomeLoader.load()));
+        Stage welcome = (Stage) btn_logout.getScene().getWindow();
+        welcome.setTitle("Messenger");
+        welcome.setResizable(false);
+        welcome.setScene(new Scene(welcomeLoader.load()));
     }
 
     /**
